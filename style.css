@@ -1,0 +1,87 @@
+/* -------------------------------------------------
+   Global reset & basic typography
+   ------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* -------------------------------------------------
+   Layout containers
+   ------------------------------------------------- */
+.site-header,
+.site-footer {
+    background-color: #004466;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+.site-header h1 { margin-bottom: 0.5rem; }
+.nav a {
+    margin: 0 0.8rem;
+    color: #cceeff;
+    font-weight: 500;
+}
+.site-main { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+
+.intro,
+.about-section { margin-bottom: 2.5rem; }
+.intro h2,
+.about-section h2,
+.gallery-section h2 { margin-bottom: 0.8rem; }
+
+/* -------------------------------------------------
+   Gallery styling – responsive grid
+   ------------------------------------------------- */
+.gallery-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.gallery-grid figure {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.gallery-grid figcaption {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+/* -------------------------------------------------
+   Footer
+   ------------------------------------------------- */
+.site-footer p {
+    font-size: 0.85rem;
+}
+
+/* -------------------------------------------------
+   Media queries – tweak for very small screens
+   ------------------------------------------------- */
+@media (max-width: 480px) {
+    .nav a { display: block; margin: 0.4rem 0; }
+}
